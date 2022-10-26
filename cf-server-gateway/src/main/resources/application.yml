@@ -1,0 +1,29 @@
+
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      routes:
+        - id: turma
+          uri: lb://turma
+          predicates:
+            - Path=/turma/**
+        - id: aluno
+          uri: lb://aluno
+          predicates:
+            - Path=/aluno/**
+        - id: professor
+          uri: lb://professor
+          predicates:
+            - Path=/professor/**
+server:
+  port: ${PORTA:8080}
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka

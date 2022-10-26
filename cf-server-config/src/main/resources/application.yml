@@ -1,0 +1,11 @@
+server:
+  port: 9090
+
+spring:
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: D:/Users/junior/IdeaProjects/Unisul/ms-exemplo-aluno-professor-turma/cf-server-config/arquivos-configuracao
