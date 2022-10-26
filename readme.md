@@ -8,6 +8,9 @@
 * Microservice professor porta 9091
 * Microservice turma porta 9095
 
+### Config server
+É necessário atualizar o caminho dos arquivos onde estarão as configurações de banco. Eles se encontram no mesmo projeto, porém o caminho é absoluto e é necessário atualizar no arquivo application.yml do cf-server-config
+
 ### Incluir professor
 #### Method POST localhost:8080/professor/
 * Body
