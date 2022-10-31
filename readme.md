@@ -46,7 +46,7 @@
 {
 "nomeTurma": "MS",
 "nomeProfessor": "Patryck",
-"nomeAlunos": ["Edson"]
+"nomeAlunos": ["João"]
 }
 
 ### Recuperar turma
