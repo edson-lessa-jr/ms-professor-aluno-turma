@@ -1,11 +1,6 @@
 package aula.mdaluno.dto;
 
 import aula.mdaluno.model.Aluno;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-@Data
-@NoArgsConstructor
 
 public class DadosBasicoAlunoDTO {
     private Long id;
@@ -16,4 +11,22 @@ public class DadosBasicoAlunoDTO {
         this.nome = aluno.getNome();
     }
 
+    public DadosBasicoAlunoDTO() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 }

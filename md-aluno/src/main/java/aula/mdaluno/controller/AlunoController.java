@@ -20,7 +20,7 @@ public class AlunoController {
 
     @GetMapping("/{id}")
     public AlunoDTO localizarAluno(@PathVariable(name = "id") Long id) {
-        Aluno aluno = alunoRepository.getById(id);
+        Aluno aluno = alunoRepository.getReferenceById(id);
         AlunoDTO dto = new AlunoDTO(aluno);
         return dto;
     }

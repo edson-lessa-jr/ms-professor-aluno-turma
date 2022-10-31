@@ -2,15 +2,7 @@ package aula.mdaluno.dto;
 
 
 import aula.mdaluno.model.Aluno;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString
 public class AlunoDTO {
     private String nome;
     private String dataNascimento;
@@ -25,5 +17,38 @@ public class AlunoDTO {
         aluno.setNome(this.nome);
         aluno.setDataNascimento(this.dataNascimento);
         return aluno;
+    }
+
+    public AlunoDTO() {
+    }
+
+    public AlunoDTO(String nome, String dataNascimento) {
+        this.nome = nome;
+        this.dataNascimento = dataNascimento;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(String dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
+
+    @Override
+    public String toString() {
+        return "AlunoDTO{" +
+                "nome='" + nome + '\'' +
+                ", dataNascimento='" + dataNascimento + '\'' +
+                '}';
     }
 }

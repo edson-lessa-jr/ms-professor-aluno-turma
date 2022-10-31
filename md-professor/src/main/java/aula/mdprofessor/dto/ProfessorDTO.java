@@ -3,16 +3,10 @@ package aula.mdprofessor.dto;
 
 import aula.mdprofessor.model.Especialidade;
 import aula.mdprofessor.model.Professor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Data
-@NoArgsConstructor
-@ToString
 public class ProfessorDTO {
     private Long id;
     private String nome;
@@ -24,7 +18,7 @@ public class ProfessorDTO {
         this.dataNascimento = dataNascimento;
         this.especialidades = especialidades;
     }
-
+    public ProfessorDTO(){}
     public ProfessorDTO(Professor professor) {
         this.id= professor.getId();
         this.nome=professor.getNome();
@@ -46,5 +40,47 @@ public class ProfessorDTO {
             professor.adicionarEspecialidade(Especialidade.valueOf(this.especialidades.get(i)));
         }
         return professor;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(String dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
+    public List<String> getEspecialidades() {
+        return especialidades;
+    }
+
+    public void setEspecialidades(List<String> especialidades) {
+        this.especialidades = especialidades;
+    }
+
+    @Override
+    public String toString() {
+        return "ProfessorDTO{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", dataNascimento='" + dataNascimento + '\'' +
+                ", especialidades=" + especialidades +
+                '}';
     }
 }

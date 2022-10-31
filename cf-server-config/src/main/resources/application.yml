@@ -8,4 +8,4 @@ spring:
     config:
       server:
         native:
-          search-locations: D:/Users/junior/IdeaProjects/Unisul/ms-exemplo-aluno-professor-turma/cf-server-config/arquivos-configuracao
+          search-locations: C:/Users/edson/IdeaProjects/unisul/ms-professor-aluno-turma/cf-server-config/arquivos-configuracao
